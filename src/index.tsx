@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from 'Components/main';
+import Router from './routes';
+
+import 'Styles/index.less';
 
 // For Hot-reloading in Dev Environment
-if (module && (module as any).hot) {
-    (module as any).hot.accept();
+if (module && module.hot) {
+    module.hot.accept();
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));

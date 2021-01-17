@@ -76,6 +76,8 @@ module.exports = {
             Pages: path.resolve(PROJECT_ROOT, './src/pages'),
             Routes: path.resolve(PROJECT_ROOT, './src/routes'),
             Services: path.resolve(PROJECT_ROOT, './src/services'),
+            Styles: path.resolve(PROJECT_ROOT, './src/styles'),
+            Typings: path.resolve(PROJECT_ROOT, './src/typings'),
             Utils: path.resolve(PROJECT_ROOT, './src/utils'),
         },
     },
