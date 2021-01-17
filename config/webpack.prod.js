@@ -2,11 +2,11 @@ const { merge } = require('webpack-merge');
 const { BannerPlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');  // Bundle analyzer
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -60,11 +60,13 @@ module.exports = merge(common, {
             raw: true,
             banner: '/** @preserve Powered by kwanstyle (https://github.com/kwanstyle) */',
         }),
+        /*
         new BundleAnalyzerPlugin({
             analyzerMode: 'server',
             analyzerHost: 'localhost',
             analyzerPort: 8088,
         }),
+        */
     ],
     optimization: {
         minimizer: [
